@@ -23,3 +23,26 @@ def get_traveler_location(traveler):
 test_destination_index = get_traveler_location(test_traveler)
 
 print(test_destination_index)
+
+
+attractions = [[] for thing in range(0,5)]
+
+print(attractions)
+
+def add_attraction(destination, attraction):
+  try:
+    destination_index = get_destination_index(destination)
+    attractions_for_destination = attractions[destination_index]
+    attractions_for_destination.append(attraction)
+  except SyntaxError:
+    print("Error caught!")
+    return
+	
+
+add_attraction("Los Angeles, USA",['Venice Beach', ['beach']])
+
+print(attractions) 
+
+
+
+
